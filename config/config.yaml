@@ -75,27 +75,74 @@ weight:
   frequency_weight: 0.5 # 频次权重
   hotness_weight: 0.1 # 热度权重
 
-# name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
+# 平台矩阵（先跑稳态核心；扩展源按需解注）
 platforms:
-  - id: "toutiao"
-    name: "今日头条"
+  # —— 综合/权威（中日舆情、政策面入口）
   - id: "baidu"
     name: "百度热搜"
-  - id: "wallstreetcn-hot"
-    name: "华尔街见闻"
   - id: "thepaper"
     name: "澎湃新闻"
-  - id: "bilibili-hot-search"
-    name: "bilibili 热搜"
-  - id: "cls-hot"
-    name: "财联社热门"
   - id: "ifeng"
     name: "凤凰网"
-  - id: "tieba"
-    name: "贴吧"
-  - id: "weibo"
-    name: "微博"
-  - id: "douyin"
-    name: "抖音"
+  - id: "zaobao"
+    name: "联合早报"
+
+  # —— 财经（跟踪金价/美债/美股/美元指数与宏观）
+  - id: "wallstreetcn-quick"
+    name: "华尔街见闻·快讯"
+  - id: "wallstreetcn-hot"
+    name: "华尔街见闻·最热"
+  - id: "cls-telegraph"
+    name: "财联社·电报"
+  - id: "cls-hot"
+    name: "财联社·热门"
+  - id: "jin10"
+    name: "金十数据"
+  - id: "gelonghui"
+    name: "格隆汇·事件"
+  - id: "xueqiu-hotstock"
+    name: "雪球·热门股票"
+  - id: "fastbull-express"
+    name: "法布财经·快讯"
+
+  # —— 科技/产品/创业（AI产品动态、开发者与创投）
+  - id: "ithome"
+    name: "IT之家"
+  #- id: "36kr-quick"
+  #  name: "36氪·快讯"        # 若抓取失败偏多，可先注释
+  - id: "producthunt"
+    name: "Product Hunt"
+  - id: "hackernews"
+    name: "Hacker News"
+  - id: "github-trending-today"
+    name: "GitHub Trending · Today"
+
+  # —— 知识/社区（相对高质）
   - id: "zhihu"
     name: "知乎"
+  - id: "bilibili-hot-search"
+    name: "B站·热搜"
+
+  # —— 可选扩展（量大噪点高；词表稳定后再开）
+  - id: "toutiao"
+    name: "今日头条"
+  - id: "weibo"
+    name: "微博·热搜"
+  - id: "douyin"
+    name: "抖音·热榜"
+  # - id: "tieba"
+  #   name: "贴吧·热议"
+  - id: "v2ex-share"
+    name: "V2EX·分享"
+  - id: "coolapk"
+    name: "酷安·今日最热"
+  - id: "sspai"
+    name: "少数派·热门"
+  - id: "juejin"
+    name: "稀土掘金·热门"
+  - id: "solidot"
+    name: "Solidot"
+  # - id: "bilibili-hot-video"
+  #   name: "B站·热门视频"   # 有 cf 风控，Actions 上易失败
+  # - id: "bilibili-ranking"
+  #   name: "B站·排行榜"     # 有 cf 风控，Actions 上易失败
